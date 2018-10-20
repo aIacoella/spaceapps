@@ -25,8 +25,12 @@ function loadImages(tag){
             console.log(response);
         }
     });
-    $.get( "../php/img_select.php", function( data ) {
-        $( ".result" ).html( data );
-        alert( "Load was performed." );
+    $.ajax({
+        url: "../php/img_select.php",
+        data: tag,
+        dataType: 'json',
+        success: function(response) {
+            console.log(response);
+        }
       });
 }

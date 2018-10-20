@@ -16,6 +16,8 @@ window.onload = function () {
                 span.className = "badge badge-secondary";
 
                 span.addEventListener("click", function(){
+                    clearSpans();
+                    span.style.background = "#FF4136";
                     loadImages(i);
                 });
 
@@ -33,6 +35,6 @@ window.onload = function () {
 function clearSpans(){
     let spans = document.getElementsByClassName("badge");
     for(let i=0; i<spans.length; i++){
-        spans.style.backgroundColor
+        spans.style.backgroundColor = "#AAAAAA"
     }
 }

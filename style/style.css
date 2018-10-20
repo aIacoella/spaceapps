@@ -29,6 +29,7 @@ body{
 
 .tag span{
     transition: 0.2s;
+    background-color: #AAAAAA;
 }
 
 .tag span:hover{
