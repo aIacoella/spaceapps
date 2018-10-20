@@ -9,6 +9,6 @@
         $content = $conn->real_escape_string($_POST['content']);
 
         $query = "INSERT INTO comments (content, img) SELECT $content, img_id FROM images WHERE path = '$name'";
-
+        $mysqli->query($query);
     }
 ?>
