@@ -16,8 +16,7 @@ window.onload = function () {
                 span.className = "badge badge-secondary";
 
                 span.addEventListener("click", function(){
-
-                    loadImages(i);
+                    loadImages(tags[i]);
                 });
 
                 span.appendChild(document.createTextNode(tags[i]));
