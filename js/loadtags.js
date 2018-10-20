@@ -6,14 +6,15 @@ window.onload = function () {
         success: function(response) {
             console.log(response);
             let tagSelection = document.getElementById("tagSelection");
-            for(let i = 0; i<response.length; i++){
+            let tags = response.tag;
+            for(let i = 0; i<tags.length; i++){
                 let tagDiv = document.createElement("div");
-                tagDiv.class = "tag-div";
+                tagDiv.className = "tag-div";
                 let tag = document.createElement("h4");
-                tag.class = "tag";
+                tag.className = "tag";
                 let span = document.createElement("span");
-                span.class = "badge badge-secondary";
-                span.appendChild(document.createTextNode(response[i]));
+                span.className = "badge badge-secondary";
+                span.appendChild(document.createTextNode(tags[i]));
                 tag.appendChild(span);
                 tagDiv.appendChild(tag);
 
