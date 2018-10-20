@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 20, 2018 at 05:30 PM
+-- Generation Time: Oct 20, 2018 at 06:24 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -120,7 +120,15 @@ CREATE TABLE `tags` (
 --
 
 INSERT INTO `tags` (`tag_id`, `name`) VALUES
-(1, 'null');
+(1, 'human\r\n'),
+(2, 'galaxy'),
+(3, 'star'),
+(4, 'infinity'),
+(5, 'time'),
+(6, 'galaxy'),
+(7, 'star'),
+(8, 'infinity'),
+(9, 'time');
 
 --
 -- Indexes for dumped tables
@@ -166,7 +174,7 @@ ALTER TABLE `images`
 -- AUTO_INCREMENT for table `tags`
 --
 ALTER TABLE `tags`
-  MODIFY `tag_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `tag_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
