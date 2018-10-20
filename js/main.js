@@ -20,10 +20,13 @@ function loadImages(tag){
         clearImages();
         let imgDiv = document.getElementsByClassName("imgDiv")[0];
         for(let i=0; i<imgs.length; i++){
+            let aimg = document.createElement("a");
+            aimg.href = "./inspireAdd?name=" + imgs[i];
             let img = document.createElement("img");
             img.className = "hubble-img";
             img.src = "../img/"+imgs[i];
-            imgDiv.appendChild(img);
+            aimg.appendChild(img);
+            imgDiv.appendChild(aimg);
         }
       });
 }
