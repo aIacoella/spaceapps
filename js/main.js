@@ -17,7 +17,7 @@ function changeHoverState(i){
 function loadImages(tag){
     console.log(tag);
     $.ajax({
-        type: 'post',
+        type: 'get',
         url: '../php/img_select.php',
         data: tag,
         dataType: 'json',
@@ -25,4 +25,8 @@ function loadImages(tag){
             console.log(response);
         }
     });
+    $.get( "../php/img_select.php", function( data ) {
+        $( ".result" ).html( data );
+        alert( "Load was performed." );
+      });
 }
