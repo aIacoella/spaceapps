@@ -15,6 +15,8 @@ window.onload = function () {
                 let span = document.createElement("span");
                 span.className = "badge badge-secondary";
                 span.appendChild(document.createTextNode(tags[i]));
+                span.appendChild(document.createTextNode(response[i]));
+
                 tag.appendChild(span);
                 tagDiv.appendChild(tag);
 
@@ -22,4 +24,11 @@ window.onload = function () {
             }
         }
     });
+}
+
+function clearSpans(){
+    let spans = document.getElementsByClassName("badge");
+    for(let i=0; i<spans.length; i++){
+        spans.style.backgroundColor
+    }
 }

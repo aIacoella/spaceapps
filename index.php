@@ -14,7 +14,7 @@
 <body>
     <div class="header-index" >
         <img style="display:inline; margin-bottom: 15px;" src="./img/bridge.svg" alt="icon">
-        <h1 style="display:inline"  >Bridge</h1>
+        <h1 style="display:inline;">Bridge</h1>
     </div>
     <div class="selectionWrapper">
         <a href="./php/inspire.php" id="inspire" class="userDiv inspireDiv" onmouseenter="changeHoverState(0)">
