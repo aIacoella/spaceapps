@@ -14,16 +14,7 @@
     <div class="header">
         <h1>Bridge</h1>
     </div>
-    <div class="tagSelection">
-        <div class="tag-div">
-            <h4 class="tag"><span class="badge badge-secondary">Stars</span></h4>
-        </div>
-        <div class="tag-div">
-            <h4 class="tag"><span class="badge badge-secondary">Galaxy</span></h4>
-        </div>
-        <div class="tag-div">
-            <h4 class="tag"><span class="badge badge-secondary">Human</span></h4>
-        </div>
+    <div class="tagSelection" id="tagSelection">
 
     </div>
 </body>
