@@ -22,7 +22,7 @@
                 /* prints images */
             }
         }
-
+        
         $mysqli->close();
     }
 ?>
