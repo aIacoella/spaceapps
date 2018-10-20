@@ -14,15 +14,15 @@ function changeHoverState(i){
     }
 }
 
-function activateTag(i){
-    console.log(i);
+function activateTag(tag){
+    console.log(tag);
     $.ajax({
         type: 'post',
         url: '../php/img_select.php',
-        data: imgs,
+        data: tag,
         dataType: 'json',
         success: function(response) {
-            console.log(imgs);
+            console.log(response);
         }
     });
 }

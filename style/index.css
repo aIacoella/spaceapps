@@ -60,9 +60,7 @@ body{
 
 .header-index{
     position: absolute;
-    height: 50px;
-    padding-top: auto;
-    padding-left: 40px;
+    padding: 10px 0 10px 40px;
     z-index: 1;
     background-color: #001f3f;
     font-size: 20px;
