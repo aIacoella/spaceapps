@@ -6,6 +6,7 @@ window.onload = function () {
         success: function(response) {
             console.log(response);
             let tagSelection = document.getElementById("tagSelection");
+            nTags = response.length;
             for(let i = 0; i<response.length; i++){
                 let tagDiv = document.createElement("div");
                 tagDiv.class = "tag-div";
@@ -14,6 +15,11 @@ window.onload = function () {
                 let span = document.createElement("span");
                 span.class = "badge badge-secondary";
                 span.appendChild(document.createTextNode(response[i]));
+                
+                span.addEventListener("click", function () { 
+                    
+                })
+
                 tag.appendChild(span);
                 tagDiv.appendChild(tag);
 
@@ -21,4 +27,11 @@ window.onload = function () {
             }
         }
     });
+}
+
+function clearSpans(){
+    let spans = document.getElementsByClassName("badge");
+    for(let i=0; i<spans.length; i++){
+        spans.style.backgroundColor
+    }
 }

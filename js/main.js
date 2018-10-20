@@ -14,7 +14,7 @@ function changeHoverState(i){
     }
 }
 
-function activateTag(tag){
+function loadImages(tag){
     console.log(tag);
     $.ajax({
         type: 'post',

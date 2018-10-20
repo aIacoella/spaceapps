@@ -15,7 +15,7 @@
         <h1>Bridge</h1>
     </div>
     <div class="tagSelection" id="tagSelection">
-
+    
     </div>
 </body>
 </html>
