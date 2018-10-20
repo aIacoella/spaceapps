@@ -6,7 +6,7 @@
         /* Select all images which have the chosen tag */
         include_once "db_connection.php";
         $chosen_tag = $conn->real_escape_string($_POST['tag']);
-        $query = "SELECT path FROM images INNER JOIN tags ON tags.tag_id = $chosen_tag WHERE tags.name =".$chosen_tag;
+        $query = "SELECT path FROM images INNER JOIN tags ON tags.name = $chosen_tag WHERE tags.name =".$chosen_tag;
         
 
         if(!($r=$conn->query($query))){
