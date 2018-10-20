@@ -14,7 +14,7 @@
         $row_i = $r->fetch_array(SQLI_ASSOC);
         $reply->path = $row_i["path"];
         $reply->right = $row_i["content"];
-        $query = "SELECT content FROM comments WHERE comment_id != $row_i['comment_id'] ORDER BY random() limit 3";
+        $query = "SELECT content FROM comments WHERE comment_id !=". $row_i['comment_id']." ORDER BY random() limit 3";
         $r->close();
         if(!($r = $conn->query($query))){
             /* Error */
