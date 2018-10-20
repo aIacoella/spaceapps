@@ -7,8 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../style/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/loadtags.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/loadtags.js"></script>
 </head>
 <body>
     <div class="header">

@@ -15,7 +15,7 @@
             $i = 0;
             $reply;
             while(($row = $r->fetch_array(MYSQLI_ASSOC))){
-               $reply->path.{"$i"} = $row['path'];
+               $reply->path{"$i"} = $row['path'];
             }
         }
         $r->close();

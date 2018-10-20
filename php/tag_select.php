@@ -9,7 +9,7 @@
     $reply;
     $i = 0;
     while(($row = $r->fetch_array(MYSQLI_ASSOC))){
-        $reply->{"$i"} = $row["name"];
+        $reply->tag{"$i"} = $row["name"];
         $i++;
     }
     $r->close();
