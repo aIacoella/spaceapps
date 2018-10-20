@@ -13,3 +13,16 @@ function changeHoverState(i){
         document.getElementById("beinspired").style.filter = "grayscale(0%)";
     }
 }
+
+function activateTag(i){
+    console.log(i);
+    $.ajax({
+        type: 'post',
+        url: '../php/img_select.php',
+        data: imgs,
+        dataType: 'json',
+        success: function(response) {
+            console.log(imgs);
+        }
+    });
+}
