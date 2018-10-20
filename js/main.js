@@ -17,15 +17,6 @@ function changeHoverState(i){
 function loadImages(tag){
     console.log(tag);
     $.ajax({
-        type: 'get',
-        url: '../php/img_select.php',
-        data: tag,
-        dataType: 'json',
-        success: function(response) {
-            console.log(response);
-        }
-    });
-    $.ajax({
         url: "../php/img_select.php",
         data: tag,
         dataType: 'json',
