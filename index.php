@@ -12,11 +12,17 @@
     
 </head>
 <body>
-    <a href="" id="inspire" class="userDiv inspireDiv" onmouseenter="changeHoverState(0)">
-        <h1 class="classTitle">Inspire</h1>
-    </a>
-    <a href="" id="beinspired" class="userDiv beinspiredDiv" onmouseenter="changeHoverState(1)">
-        <h1 class="classTitle">Be Inspired</h1>
-    </a>
+    <div class="header">
+        <h1>Bridge</h1>
+    </div>
+
+    <div class="selectionWrapper">
+        <a href="" id="inspire" class="userDiv inspireDiv" onmouseenter="changeHoverState(0)">
+            <h1 class="classTitle">Inspire</h1>
+        </a>
+        <a href="" id="beinspired" class="userDiv beinspiredDiv" onmouseenter="changeHoverState(1)">
+            <h1 class="classTitle">Be Inspired</h1>
+        </a>
+    </div>
 </body>
 </html>
