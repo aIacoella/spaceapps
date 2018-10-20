@@ -16,20 +16,21 @@ function changeHoverState(i){
 
 function loadImages(tag){
       $.get( "../php/img_select.php",{ tag: tag } ,function( data ) {
-        console.log(data);
+        const imgs = JSON.parse(data).img;
         clearImages();
-        let imgDiv = document.getElementById("imgDiv");
-        for(let i=0; i<data.length; i++){
+        let imgDiv = document.getElementsByClassName("imgDiv")[0];
+        for(let i=0; i<imgs.length; i++){
             let img = document.createElement("img");
             img.className = "hubble-img";
-            img.src = data[i];
+            img.src = "../img/"+imgs[i];
             imgDiv.appendChild(img);
         }
       });
 }
 
 function clearImages(){
-    let images = document.getElementsByClassName("hubble-img");
+    let images = document.getElementsByClassName("imgDiv")[0];
+    console.log(images);
     while (images.firstChild) {
         images.removeChild(images.firstChild);
       }

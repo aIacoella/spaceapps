@@ -16,13 +16,13 @@
         }else{
             $i = 0;
             while(($row = $r->fetch_array(MYSQLI_ASSOC))){
-               echo $reply->tag{"$i"}=$row['path'];
+                $reply->img{"$i"}=$row['path'];
                $i++;
             }
         $r->close();
         }
         $conn->close();
-
+        echo json_encode($reply);
         exit();
     }
 ?>
