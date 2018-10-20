@@ -12,8 +12,9 @@
     }else{
         /* Select all images which have the chosen tag */
         include_once "db_connection.php";
-        $query = "SELECT tags.name, path, date FROM images INNER JOIN tags ON tags.tag_id = tag";
         $chosen_tag = $conn->real_escape_string($_POST['tag']);
+        $query = "SELECT tags.name, path, date FROM images INNER JOIN tags ON tags.tag_id = tag WHERE tags.name =".$chosen_tag;
+        
 
         if(!($r=$conn->query($query))){
             echo "<p> Errore nel database</p>";

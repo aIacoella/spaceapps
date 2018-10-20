@@ -1,5 +1,5 @@
 <?php
-    include_once "../db/db_connection.php";
+    include_once "../php/db_connection.php";
     $images=array_slice(scandir("."), 2);
     for($i = 0; $i < count($images); $i++){
         if(($conn->query("SELECT * FROM images WHERE path = $images[$i]"))->num_rows == 0){
@@ -8,4 +8,6 @@
             }
         }
     }
+    $conn->close();
+    exit();
 ?>
