@@ -20,9 +20,10 @@
             /* Error */
             exit();
         }
-        $i = 1;
+        $i = 0;
         while(($row = $r->fetch_array(MYSQLI_ASSOC))){
            $reply->{"$i"} = $row['content'];
+           $i++;
         }
         $r->close();
         echo json_encode($reply);
