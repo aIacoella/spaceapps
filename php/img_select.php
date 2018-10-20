@@ -16,7 +16,7 @@
         }else{
             $i = 0;
             while(($row = $r->fetch_array(MYSQLI_ASSOC))){
-               echo $reply->tag{"$i"}=$row['path']."<br>";
+               echo $reply->tag{"$i"}=$row['path'];
                $i++;
             }
         $r->close();
