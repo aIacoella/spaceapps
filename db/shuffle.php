@@ -14,7 +14,8 @@
         $row_i = $r->fetch_array(SQLI_ASSOC);
         $reply->path = $row_i["path"];
         $reply->right = $row_i["content"];
-        $query = "SELECT content FROM comments WHERE comment_id != $row['comment_id'] ORDER BY random() limit 3";
+        $query = "SELECT content FROM comments WHERE comment_id != $row_i['comment_id'] ORDER BY random() limit 3";
+        $r->close();
         if(!($r = $conn->query($query))){
             /* Error */
             exit();
@@ -23,7 +24,9 @@
         while(($row = $r->fetch_array(MYSQLI_ASSOC))){
            $reply->{"$i"} = $row['content'];
         }
+        $r->close();
         echo json_encode($reply);
+        $conn->close();
         exit();
     }
 ?>
