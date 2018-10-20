@@ -1,5 +1,5 @@
 <?php
-    $conn = new mysqli("localhost", "bridge", "bridge", "bridge");
+    $conn = new mysqli("localhost", "root", "", "bridge");
 
     if($conn->connect_errno){
         /*
