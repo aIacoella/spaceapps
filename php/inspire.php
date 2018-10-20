@@ -17,5 +17,8 @@
     <div class="tagSelection" id="tagSelection">
 
     </div>
+    <div class="container-fluid imgDiv">
+
+    </div>
 </body>
 </html>

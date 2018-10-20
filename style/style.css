@@ -37,3 +37,13 @@ body{
     background-color: #FF4136;
     opacity: 0.8;
 }
+
+.imgDiv{
+    margin: 10px;
+}
+
+.hubble-img{
+    margin: 4px;
+    padding: 2px;
+    border: solid 2px #001f3f;
+}
