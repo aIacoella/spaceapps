@@ -21,6 +21,7 @@
                 <p>Well Played!</p>
                 <p>Your score is $score</p>
                 <input type = \"text\" name = \"name\">
+                <input type = \"hidden\" name=\"score\" value = \"$score\"> 
                 <input type = \"submit\">
             </form>";
         }
