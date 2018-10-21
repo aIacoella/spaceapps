@@ -9,8 +9,7 @@ function changeHoverState(i){
         document.getElementById("inspire").style.opacity = 0.4;
         document.getElementById("inspire").style.filter = "grayscale(100%)";
 
-        document.getEleme
-        ntById("beinspired").style.opacity = 0.9;
+        document.getElementById("beinspired").style.opacity = 0.9;
         document.getElementById("beinspired").style.filter = "grayscale(0%)";
     }
 }

@@ -20,7 +20,7 @@
         <a href="./php/inspire.php" id="inspire" class="userDiv inspireDiv" onmouseenter="changeHoverState(0)">
             <h1 class="classTitle">Inspire</h1>
         </a>
-        <a href="" id="beinspired" class="userDiv beinspiredDiv" onmouseenter="changeHoverState(1)">
+        <a href="php/game.php" id="beinspired" class="userDiv beinspiredDiv" onmouseenter="changeHoverState(1)">
             <h1 class="classTitle">Be Inspired</h1>
         </a>
     </div>
