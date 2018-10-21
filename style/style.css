@@ -20,7 +20,11 @@ body{
     text-decoration:none;
 }
 
-.header a, .header span{
+.header .inspire{
+    margin-left : 40%;
+}
+
+.header a:not(.inspire), .header span{
     margin-left: 50px;
 }
 
