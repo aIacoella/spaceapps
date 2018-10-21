@@ -16,6 +16,14 @@ body{
     display:inline;
 }
 
+.header a{
+    text-decoration:none;
+}
+
+.header a,span{
+    margin-left: 40%;
+}
+
 
 .tagSelection{
     display: block;
