@@ -29,7 +29,11 @@
                     echo $conn->error;
                     exit();
                 }else{
-                    echo "<table>";
+                    echo "<table class='leaderboard'>";
+                    echo "  <tr>
+                    <th>Username</th>
+                    <th>Score</th>
+                  </tr>";
                     while(($row = $r->fetch_array(MYSQLI_ASSOC))){
                         echo "<tr><td>".$row['name']."</td><td>".$row['score']."</td></tr>";
                     }
@@ -41,9 +45,11 @@
         echo "<form method = \"post\" action = \"".basename(__FILE__)."\">
                 <h2 class='wellPlayed'>Well Played!</h2>
                 <h4 class='wellPlayed'>Your score is $score</h4>
-                <input type = \"text\" name = \"name\"  placeholder='Username' >
+                <div class='wpdiv'>
+                    <input type = \"text\" name = \"name\"  placeholder='Username' >
+                    <input type = \"submit\" value='Send'>
+                </div>
                 <input type = \"hidden\"name=\"score\" value = \"$score\" > 
-                <input type = \"submit\" value='Send'>
             </form>";
         }
     }
