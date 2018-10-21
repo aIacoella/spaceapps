@@ -14,7 +14,24 @@
         include_once "db_connection.php";
         if(isset($_POST['name'])){
             $name = $conn->real_escape_string($_POST['name']);
-           $query = "INSERT INTO leaderboard (name, score) VALUES ()"; 
+            $score = $conn->real_escape_string($_POST['score']);
+           $query = "INSERT INTO leaderboard (name, score) VALUES ('$name', $score)"; 
+           if(!($r = $conn->query($query))){
+               echo $conn->error;
+               exit();
+           }else{
+               $query = "SELECT name, score FROM leaderboard WHERE 1 ORDER BY score DESC LIMIT 10";
+               if(!($r = $conn->query($query))){
+                    echo $conn->error;
+                    exit();
+                }else{
+                    echo "<table>";
+                    while(($row = $r->fetch_array(MYSQLI_ASSOC))){
+                        echo "<tr><td>".$row['name']."</td><td>".$row['score']."</td></tr>";
+                    }
+                    echo "</table>";
+                }
+           }
         }else{
         $score = $conn->real_escape_string($_POST['score']);
         echo "<form method = \"post\" action = \"".__FILE__."\">
