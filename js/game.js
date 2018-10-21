@@ -8,11 +8,13 @@ window.onload=function (){
 function updateGame(){
   $.get( "../php/shuffle.php", function( data ) {
     console.log(data);
-    document.getElementById("mainImg").src = data[0];
-    document.getElementById("answer1").src = data[1];
-    document.getElementById("answer2").src = data[2];
-    document.getElementById("answer3").src = data[3];
-    document.getElementById("answer4").src = data[4];
+    data = JSON.parse(data);
+    console.log(data[0]);
+    document.getElementById("mainImg").src = "../img/"+data[0];
+    document.getElementById("answer1").innerHTML = data[1];
+    document.getElementById("answer2").innerHTML = data[2];
+    document.getElementById("answer3").innerHTML = data[3];
+    document.getElementById("answer4").innerHTML = data[4];
   });
 }
 
