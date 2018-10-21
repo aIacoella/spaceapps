@@ -12,6 +12,11 @@ body{
     width: 100%;
 }
 
+.header *{
+    display:inline;
+}
+
+
 .tagSelection{
     display: block;
     margin: 8px 16px;
