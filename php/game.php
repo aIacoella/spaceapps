@@ -19,14 +19,24 @@
         </div>
     </div>
 
-    <img class="main-img" src=<?php 
-        if(!isset($_GET['name'])) echo "errore";
-        else echo "'../img/" . $_GET['name'] . "'";
-        ?> alt="boh fra">
+    <img class="main-img" id="mainImg" src="" alt="img">
 
     <div class="answers-div">
         <div class="answer-block">
             <div class="num-block">1</div>
+            <p id="answer1"></p>
+        </div>
+        <div class="answer-block">
+            <div class="num-block">2</div>
+            <p id="answer2"></p>
+        </div>
+        <div class="answer-block">
+            <div class="num-block">3</div>
+            <p id="answer3"></p>
+        </div>
+        <div class="answer-block">
+            <div class="num-block">4</div>
+            <p id="answer4"></p>
         </div>
     </div>
     
