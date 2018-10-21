@@ -23,6 +23,7 @@
         else echo $_GET['name'];
         ?>>
         <input type="text" name="content">
+        <input type="submit">
     </form>
 </body>
 </html>
