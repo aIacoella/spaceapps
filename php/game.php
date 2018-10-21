@@ -19,10 +19,8 @@
             1
         </div>
     </div>
-    <div style="widt:100%">
         <img class="main-img" id="mainImg" src="" alt="img">
-    </div>
-
+    <form id="gameForm" method="post" action= "leaderboard.php">
     <div class="answers-div">
         <div class="answer-block" onClick="answer(1)">
             <div class="num-block">1</div>
@@ -40,6 +38,7 @@
             <div class="num-block">4</div>
             <p id="answer4"></p>
         </div>
+        <input id = "scoreInput" name = "score" type="hidden" value="">
     </div>
     
 </body>

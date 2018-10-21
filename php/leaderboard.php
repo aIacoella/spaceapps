@@ -34,7 +34,7 @@
            }
         }else{
         $score = $conn->real_escape_string($_POST['score']);
-        echo "<form method = \"post\" action = \"".__FILE__."\">
+        echo "<form method = \"post\" action = \"".basename(__FILE__)."\">
                 <p>Well Played!</p>
                 <p>Your score is $score</p>
                 <input type = \"text\" name = \"name\">
