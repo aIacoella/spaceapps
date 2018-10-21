@@ -11,7 +11,11 @@
 </head>
 <body>
     <div class="header">
+        <img id="logo" src = "../img/bridge.svg">
         <h1>Bridge</h1>
+        <a href = "#">Inspire</a>
+        <span>or</span>
+        <a href = "#">Be inspired</a>
     </div>
     <div>
         <form class="add-input-block" action="./add.php" method="post">
