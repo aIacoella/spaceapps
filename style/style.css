@@ -20,7 +20,7 @@ body{
     text-decoration:none;
 }
 
-.header a span{
+.header a, .header span{
     margin-left: 40%;
 }
 
