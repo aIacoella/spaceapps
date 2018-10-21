@@ -19,23 +19,24 @@
             1
         </div>
     </div>
-
-    <img class="main-img" id="mainImg" src="" alt="img">
+    <div style="widt:100%">
+        <img class="main-img" id="mainImg" src="" alt="img">
+    </div>
 
     <div class="answers-div">
-        <div class="answer-block">
+        <div class="answer-block" onClick="answer(1)">
             <div class="num-block">1</div>
             <p id="answer1"></p>
         </div>
-        <div class="answer-block">
+        <div class="answer-block" onClick="answer(2)">
             <div class="num-block">2</div>
             <p id="answer2"></p>
         </div>
-        <div class="answer-block">
+        <div class="answer-block" onClick="answer(3)">
             <div class="num-block">3</div>
             <p id="answer3"></p>
         </div>
-        <div class="answer-block">
+        <div class="answer-block" onClick="answer(4)">
             <div class="num-block">4</div>
             <p id="answer4"></p>
         </div>
