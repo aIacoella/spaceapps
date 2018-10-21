@@ -13,17 +13,22 @@
     <div class="header">
         <h1>Bridge</h1>
     </div>
-    <form action="./add.php" method="post">
-        <img src=<?php 
-        if(!isset($_GET['name'])) echo "errore";
-        else echo "'../img/" . $_GET['name'] . "'";
-        ?> alt="boh fra">
-        <input type="hidden" name="name" value=<?php 
-        if(!isset($_GET['name'])) echo "errore";
-        else echo $_GET['name'];
-        ?>>
-        <input type="text" name="content">
-        <input type="submit">
-    </form>
+    <div>
+        <form class="add-input-block" action="./add.php" method="post">
+            <img class="addImg" src=<?php 
+            if(!isset($_GET['name'])) echo "errore";
+            else echo "'../img/" . $_GET['name'] . "'";
+            ?> alt="boh fra">
+            <input type="hidden" name="name" value=<?php 
+            if(!isset($_GET['name'])) echo "errore";
+            else echo $_GET['name'];
+            ?>>
+            <div class="inputAdd">
+                <textarea class="textArea" name="content" id="txtArea" rows="10" cols="70"></textarea>
+                <input class="submit" type="submit" value="Inspire">
+            </div>
+
+        </form>
+    </div>
 </body>
 </html>

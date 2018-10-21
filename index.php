@@ -13,8 +13,10 @@
 </head>
 <body>
     <div class="header-index" >
-        <img style="display:inline; margin-bottom: 15px;" src="./img/bridge.svg" alt="icon">
-        <h1 style="display:inline;">Bridge</h1>
+        <div style="margin: auto; width: 100%;">
+        <img src="./img/bridge.svg" alt="icon">
+        <h1 style="width:100%; text-align: center;">Bridge</h1>
+        </div>
     </div>
     <div class="selectionWrapper">
         <a href="./php/inspire.php" id="inspire" class="userDiv inspireDiv" onmouseenter="changeHoverState(0)">

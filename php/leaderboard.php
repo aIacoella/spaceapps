@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>leaderboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><title>leaderboard</title>
 </head>
 <body>
+<div class="header">
+    <h1>Bridge</h1>
+</div>
 <?php
     if(!isset($_POST['score'])){
         /* Invalid request */
@@ -35,11 +39,11 @@
         }else{
         $score = $conn->real_escape_string($_POST['score']);
         echo "<form method = \"post\" action = \"".basename(__FILE__)."\">
-                <p>Well Played!</p>
-                <p>Your score is $score</p>
-                <input type = \"text\" name = \"name\">
-                <input type = \"hidden\" name=\"score\" value = \"$score\"> 
-                <input type = \"submit\">
+                <h2 class='wellPlayed'>Well Played!</h2>
+                <h4 class='wellPlayed'>Your score is $score</h4>
+                <input type = \"text\" name = \"name\"  placeholder='Username' >
+                <input type = \"hidden\"name=\"score\" value = \"$score\" > 
+                <input type = \"submit\" value='Send'>
             </form>";
         }
     }
