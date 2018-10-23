@@ -1,4 +1,5 @@
 <?php
+    /* Test */
     if(!isset($_POST['name']) || !isset($_POST['content'])){
         /*
         Errore richiesta
