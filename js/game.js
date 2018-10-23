@@ -1,6 +1,6 @@
 var score = 0;
 var correct_answer = -1;
-var img = "";
+var img = " ";
 
 window.onload=function (){
   updateGame();
