@@ -25,7 +25,7 @@
                     score: the score obtained by the user.
 
             Later:
-            
+
                     name: name the user has chose.
     */
     if(!isset($_POST['score'])){
