@@ -11,14 +11,20 @@
     <script src="../js/loadtags.js"></script>
 </head>
 <body>
-    <div class="header">
+<div class="header">
+        <a style="margin: 0;"href="../index.php">
+        <img id="logo" src = "../img/bridge.svg">
+        </a>
         <h1>Bridge</h1>
+        <a class="inspire" href="./inspire.php">inspire</a>
+        <span>or</span>
+        <a href = "./game.php">be inspired</a>
     </div>
     <div class="tagSelection" id="tagSelection">
 
     </div>
     <div class="container-fluid imgDiv">
-
+        <h4 id="selectTag">Select a tag</h4>
     </div>
 </body>
 </html>

@@ -18,14 +18,15 @@ body{
 
 .header a{
     text-decoration:none;
+    outline: none;
 }
 
 .header .inspire{
-    margin-left : 40%;
+    margin-left : 20px;
 }
 
 .header a:not(.inspire), .header span{
-    margin-left: 50px;
+    margin-left: 20px;
 }
 
 
@@ -33,7 +34,6 @@ body{
     display: block;
     margin: 8px 16px;
     padding: 8px 16px;
-    border: solid 3px #111111;
 }
 
 .tag-div{
@@ -42,11 +42,14 @@ body{
 
 .tag{
     display: inline;
+    margin: 0 10px;
 }
 
 .tag span{
+    color: #111111;
     transition: 0.2s;
-    background-color: #AAAAAA;
+    background-color: white;
+    border: solid 1px #111111;
 }
 
 .tag span:hover{
@@ -62,9 +65,6 @@ body{
 .hubble-img{
     margin: 4px;
     padding: 2px;
-    border: solid 2px #001f3f;
-    width: 80px;
-    height: 80px;
     opacity: 0.7;
     transition: 0.2s;
 }

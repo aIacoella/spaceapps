@@ -11,14 +11,16 @@
 </head>
 <body>
     <div class="header">
+    <a style="margin: 0;"href="../index.php">
         <img id="logo" src = "../img/bridge.svg">
+        </a>
         <h1>Bridge</h1>
-        <a class="inspire" href = "#">Inspire</a>
+        <a class="inspire" href="./inspire.php">inspire</a>
         <span>or</span>
-        <a href = "#">Be inspired</a>
+        <a href = "./game.php">be inspired</a>
     </div>
     <div>
-        <form class="add-input-block" action="./add.php" method="post">
+        <form class="add-input-block" action="add.php" method="post">
             <img class="addImg" src=<?php 
             if(!isset($_GET['name'])) echo "errore";
             else echo "'../img/" . $_GET['name'] . "'";

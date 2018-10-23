@@ -4,7 +4,7 @@
     */
     include_once "db_connection.php";
      /* Image and right comment */
-    $query = "SELECT comment_id, images.path, content FROM comments INNER JOIN images ON img_id = comment_id ORDER BY rand() limit 1";
+    $query = "SELECT comment_id, images.path, content FROM comments INNER JOIN images ON img_id = img ORDER BY rand() limit 1 ";
 
     if(!($r = $conn->query($query))){
         echo "Ciao";
@@ -17,7 +17,7 @@
         $r->close();
         if(!($r = $conn->query($query))){
             /* Error */
-            echo "Ciao";
+            echo "Ciao!";
             exit();
         }
         $i = 2;

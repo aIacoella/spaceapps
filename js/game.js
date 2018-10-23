@@ -42,4 +42,3 @@ function answer(answer){
 }
 
 
-

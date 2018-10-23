@@ -9,8 +9,14 @@
 </head>
 <body>
 <div class="header">
-    <h1>Bridge</h1>
-</div>
+    <a style="margin: 0;"href="../index.php">
+        <img id="logo" src = "../img/bridge.svg">
+        </a>
+        <h1>Bridge</h1>
+        <a class="inspire" href="./inspire.php">inspire</a>
+        <span>or</span>
+        <a href = "./game.php">be inspired</a>
+    </div>
 <?php
     if(!isset($_POST['score'])){
         /* Invalid request */
