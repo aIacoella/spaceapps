@@ -21,7 +21,7 @@
     </div>
     <div>
         <form class="add-input-block" action="add.php" method="post">
-            <img class="addImg" src=<?php 
+            <img id="mainImg" class="addImg" src=<?php 
             if(!isset($_GET['name'])) echo "errore";
             else echo "'../img/" . $_GET['name'] . "'";
             ?> alt="boh fra">
@@ -35,5 +35,8 @@
             </div>
         </form>
     </div>
+
+    <script src="../js/addAnimation.js"></script>
+    
 </body>
 </html>
