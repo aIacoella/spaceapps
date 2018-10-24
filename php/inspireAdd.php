@@ -22,7 +22,7 @@
     </div>
     <div>
         <form class="add-input-block" action="add.php" method="post">
-            <img id="mainImg" class="addImg" src=<?php 
+            <img id="mainImg" class="main-img" src=<?php 
             if(!isset($_GET['name'])) echo "errore";
             else echo "'../img/" . $_GET['name'] . "'";
             ?> alt="boh fra">
@@ -38,6 +38,6 @@
     </div>
 
     <script src="../js/addAnimation.js"></script>
-    
+
 </body>
 </html>

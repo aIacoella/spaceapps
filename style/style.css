@@ -97,7 +97,7 @@ body {
 }
 
 .current-score-div > div {
-  background: #001f3f;
+  background: #0096ea;
   border-radius: 6px;
   width: 60px;
   height: 100%;
@@ -105,15 +105,12 @@ body {
   color: #dddddd;
   margin: auto;
   font-size: 24px;
-  font-weight: 700;
   padding: 10px 0;
 }
 
 .main-img {
+  margin: 40px auto;
   display: block;
-  margin: auto;
-  width: 400px;
-  height: 400px;
 }
 
 .answers-div {
@@ -127,8 +124,9 @@ body {
   padding: 20px;
   grid-template-columns: 50px auto;
   grid-template-rows: 100%;
-  border: solid 2px #001f3f;
+  border: solid 2px #0096ea;
   transition: 0.2s;
+  border-radius: 6px;
 }
 
 .answer-block:hover {
@@ -138,10 +136,7 @@ body {
 
 .num-block {
   color: #dddddd;
-  background-color: #001f3f;
   margin: auto;
-  padding: 5px 15px;
-  border-radius: 100%;
   text-align: center;
 }
 
@@ -151,7 +146,6 @@ body {
 
 .textArea {
   display: block;
-  padding: 12px;
   margin: auto;
   resize: none;
 
@@ -163,6 +157,9 @@ body {
     #e7dfdd;
   resize: none;
   transition: 1s;
+  border: solid 12px #e7dfdd;
+  border-radius: 14px;
+  outline: none;
 }
 
 .submit {
@@ -200,6 +197,6 @@ body {
 .leaderboard th {
   padding-top: 12px;
   padding-bottom: 12px;
-  background-color: #4caf50;
+  background-color: #0096ea;
   color: white;
 }

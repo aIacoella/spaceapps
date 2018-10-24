@@ -3,20 +3,14 @@ window.onload = function() {
   let img = new Image();
   img.src = imgDom.src;
 
-  maxWidth = img.width;
   maxHeight = img.height;
-
-  imgDom.height = 2;
+  imgDom.width = img.width;
 
   var appear = setInterval(frame, 10);
-  let width = 0;
   let height = 0;
   function frame() {
-    if (width < maxWidth) {
-      width += 10;
-      imgDom.width = width;
-    } else if (height < maxHeight) {
-      height += 10;
+    if (height < maxHeight) {
+      height += 8;
       imgDom.height = height;
     } else {
       clearInterval(appear);
