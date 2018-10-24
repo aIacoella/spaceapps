@@ -6,7 +6,7 @@ window.onload = function() {
   maxWidth = img.width;
   maxHeight = img.height;
 
-  imgDom.height = 2;
+  imgDom.height = 10;
 
   var appear = setInterval(frame, 10);
   let width = 0;

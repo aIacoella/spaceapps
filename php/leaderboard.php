@@ -64,14 +64,14 @@
                     <th>Score</th>
                   </tr>";
                     while(($row = $r->fetch_array(MYSQLI_ASSOC))){
-                        echo "<tr><td>".$row['name']."</td><td>".$row['score']."</td></tr>";
+                        echo "<tr><td>".htmlspecialchars($row['name'], ENT_QUOTES, 'UTF-8')."</td><td>".htmlspecialchars($row['score'], ENT_QUOTES, 'UTF-8')."</td></tr>";
                     }
                     echo "</table>";
                 }
            }
         }else{
         /* If there's no name a form is printed */
-        $score = $conn->real_escape_string($_POST['score']);
+        $score = htmlspecialchars($conn->real_escape_string($_POST['score']), ENT_QUOTES, 'UTF-8');
         echo "<form method = \"post\" action = \"".basename(__FILE__)."\">
                 <h2 class='wellPlayed'>Well Played!</h2>
                 <h4 class='wellPlayed'>Your score is $score</h4>
