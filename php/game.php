@@ -12,6 +12,7 @@
 </head>
 <body>
 <div class="header">
+
         <a href="../index.php"><img src="../graphics/bridge.svg" alt="logobridge"></a>
         <img class="logotxt" src="../graphics/bridgeHD.svg" alt="logotxt">
         <div class="right-nav">

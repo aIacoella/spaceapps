@@ -1,5 +1,6 @@
 <?php
     /*
+
         This file must be called via AJAX.
 
         It returns the data needed to run the game.

@@ -15,6 +15,10 @@ function changeHoverState(i){
 }
 
 function loadImages(tag){
+    let selectTag = document.getElementById("selectTag");
+    if(selectTag !== null){
+        selectTag.style.display = "none";
+    }
       $.get( "../php/img_select.php",{ tag: tag } ,function( data ) {
         const imgs = JSON.parse(data);
         clearImages();
