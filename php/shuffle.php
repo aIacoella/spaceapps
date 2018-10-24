@@ -23,7 +23,7 @@
         }
         $row = $r->fetch_array(MYSQLI_ASSOC);
         setcookie('game_session', $session, 0, '/');
-        setcookie('game_image', $row['path']);
+        setcookie('game_image', $row['path'], 0, '/');
         $reply = array();
         $reply[0] = $row['path'];
         $reply[1] = $row['content'];
@@ -48,7 +48,7 @@
         include_once "db_connection.php";
         $session = $_COOKIE['game_session'];
         $image = $_COOKIE['game_image'];
-        if(($fd = fopen($session, 'r+')) === FALSE){
+        if(($fd = fopen($session, 'a+')) === FALSE){
             echo "Internal error";
             die();
         }
@@ -62,7 +62,6 @@
         $query = "SELECT comment_id, images.path, content FROM comments INNER JOIN images ON img_id = img WHERE images.path NOT IN (".get_images($fd).") ORDER BY rand() limit 1";
         if(!($r = $conn->query($query))){
             echo $conn->error.$query."\n";
-            echo $query;
             fclose($fd);
             $conn->close();
             die();
@@ -102,9 +101,11 @@
         $i = 1;
         while(($read = fgets($session_file, 4096)) !== false ){
             $read = substr($read, 0, strlen($read)-1);
-            $images_a .= "'".$read."'";
+            $read = "'".$read."'";
             if($i != 1)
-                $images_a = ",".$read;
+                $images_a .= ",".$read;
+            else    
+                $images_a .= $read;
             $i++;
         }
         return $images_a;

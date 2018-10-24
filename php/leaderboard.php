@@ -35,6 +35,10 @@
         header('Location:../index.php');
     }else{
         include_once "db_connection.php";
+        $session = $_COOKIE['game_session'];
+        setcookie('game_session', "", 0, '/');
+        setcookie('game_image', "", 0, '/');
+        unlink($session);
         if(isset($_POST['name'])){
             $name = $conn->real_escape_string($_POST['name']);
             $score = $conn->real_escape_string($_POST['score']);
