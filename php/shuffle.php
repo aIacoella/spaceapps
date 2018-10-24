@@ -27,7 +27,7 @@
         setcookie('game_image', $row['path'], 0, '/');
         $reply = array();
         $reply[0] = $row['path'];
-        $reply[1] = $row['content'];
+        $reply[1] = htmlspecialchars($row['content'], ENT_QUOTES, 'UTF-8');
         $r->close();
         $query = "SELECT content FROM comments WHERE comment_id !=". $row['comment_id']." ORDER BY rand() limit 3";
         if(!($r = $conn->query($query))){
@@ -37,7 +37,7 @@
         }
         $i = 2;
         while(($row = $r->fetch_array(MYSQLI_ASSOC))){
-            $reply[$i] = $row['content'];
+            $reply[$i] = htmlspecialchars($row['content'], ENT_QUOTES, 'UTF-8');
             $i++;
         }
         $r->close();
