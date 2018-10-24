@@ -1,5 +1,6 @@
 var score = 0;
 var correct_answer = -1;
+var img = " ";
 
 window.onload=function (){
   updateGame();
@@ -7,7 +8,6 @@ window.onload=function (){
 
 function updateGame(){
   score++;
-  document.getElementById("current-score").innerText = score;
   $.get( "../php/shuffle.php", function( data ) {
     data = JSON.parse(data);
     if(data[0] === undefined){
@@ -16,6 +16,7 @@ function updateGame(){
     }
     document.getElementById("mainImg").src = "../img/"+data[0];
     document.getElementById("mainImg").style.margin = "auto";
+    img = data[0];
     indexes = [1, 2, 3, 4];
     for(let i=1; i<=4; i++){
       let index = indexes[Math.floor(Math.random()*indexes.length)];
