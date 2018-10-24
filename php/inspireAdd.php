@@ -11,11 +11,13 @@
 </head>
 <body>
     <div class="header">
-        <img id="logo" src = "../img/bridge.svg">
-        <h1>Bridge</h1>
-        <a class="inspire" href = "#">Inspire</a>
-        <span>or</span>
-        <a href = "#">Be inspired</a>
+        <a href="../index.php"><img src="../graphics/bridge.svg" alt="logobridge"></a>
+        <img class="logotxt" src="../graphics/bridgeHD.svg" alt="logotxt">
+        <div class="right-nav">
+        <a href="./inspire.php">inspire</a>
+        or
+        <a href="./game.php">be inspired</a>
+        </div>
     </div>
     <div>
         <form class="add-input-block" action="./add.php" method="post">
@@ -28,10 +30,9 @@
             else echo $_GET['name'];
             ?>>
             <div class="inputAdd">
-                <textarea class="textArea" name="content" id="txtArea" rows="10" cols="70"></textarea>
+                <textarea class="textArea" name="content" id="txtArea" rows="6" cols="70"></textarea>
                 <input class="submit" type="submit" value="Inspire">
             </div>
-
         </form>
     </div>
 </body>

@@ -9,8 +9,14 @@
 </head>
 <body>
 <div class="header">
-    <h1>Bridge</h1>
-</div>
+        <a href="../index.php"><img src="../graphics/bridge.svg" alt="logobridge"></a>
+        <img class="logotxt" src="../graphics/bridgeHD.svg" alt="logotxt">
+        <div class="right-nav">
+        <a href="./inspire.php">inspire</a>
+        or
+        <a href="./game.php">be inspired</a>
+        </div>
+    </div>
 <?php
     /*
         The first time this file is going to be required it'll show a sign up form.
