@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 20, 2018 at 06:24 PM
+-- Generation Time: Oct 24, 2018 at 08:44 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -34,6 +34,29 @@ CREATE TABLE `comments` (
   `content` tinytext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `comments`
+--
+
+INSERT INTO `comments` (`comment_id`, `img`, `content`) VALUES
+(10, 50, 'Look at the sky. We are not alone. The lights in the sky remember us our weaknesses'),
+(11, 5, 'The magnitude of the universe surrounds us with different colors '),
+(12, 26, 'Flat as the ocean, powerful as the ocean.'),
+(13, 32, 'What\'s there? The sunlight is thwarted by something we don\'t know yet.'),
+(14, 42, 'It looks like god with its angels'),
+(15, 10, 'Blue as the ocean, red as the blood'),
+(16, 33, 'I don\'t think it is a true image.'),
+(17, 16, 'Flat as the earth is supposed to be.'),
+(18, 8, 'Unicorns in the sky with long colored horns.'),
+(19, 12, 'Explosions happens from time to time. Space stays the same. Empty.'),
+(20, 18, 'Spiral gets you in. You can\'t get out.'),
+(21, 52, 'Universe is the masterpiece of our canvas.'),
+(22, 38, 'Millions of points in the sky lights our minds.'),
+(23, 46, 'Hop in the darkness to find shining light. Where will you will find the final site.'),
+(24, 21, 'Torturous movement of the galaxy make us feel the time.'),
+(25, 31, 'I think it\'s beautiful we leave here'),
+(26, 31, 'I think it\'s beautiful we leave here');
+
 -- --------------------------------------------------------
 
 --
@@ -51,58 +74,76 @@ CREATE TABLE `images` (
 --
 
 INSERT INTO `images` (`img_id`, `path`, `tag`) VALUES
-(2, 'beinspiredBG.jpg', 1),
-(3, 'bridge.svg', 1),
-(4, 'heic0502a.jpg', 1),
-(5, 'img1_0.png', 1),
-(6, 'inspireBG.jpg', 1),
-(7, 'j1354.jpg', 1),
-(8, 'pia22092.jpg', 1),
-(9, 'potw1008a.jpg', 1),
-(10, 'potw1010a_0.jpg', 1),
-(11, 'potw1015a.jpg', 1),
-(12, 'potw1036a.jpg', 1),
-(13, 'potw1148a.jpg', 1),
-(14, 'potw1746a.jpg', 1),
-(15, 'potw1748a.jpeg', 1),
-(16, 'potw1749a.jpg', 1),
-(17, 'potw1750a-1.jpg', 1),
-(18, 'potw1801a.jpg', 1),
-(19, 'potw1802a.jpg', 1),
-(20, 'potw1804a.jpg', 1),
-(21, 'potw1805a.jpg', 1),
-(22, 'potw1806a.jpg', 1),
-(23, 'potw1807a.jpg', 1),
-(24, 'potw1809a.jpg', 1),
-(25, 'potw1810a.jpg', 1),
-(26, 'potw1813a.jpg', 1),
-(27, 'potw1814a.jpg', 1),
-(28, 'potw1815a.jpg', 1),
-(29, 'potw1817a.jpg', 1),
+(4, 'heic0502a.jpg', 2),
+(5, 'img1_0.png', 4),
+(8, 'pia22092.jpg', 5),
+(10, 'potw1010a_0.jpg', 3),
+(11, 'potw1015a.jpg', 3),
+(12, 'potw1036a.jpg', 5),
+(13, 'potw1148a.jpg', 2),
+(14, 'potw1746a.jpg', 2),
+(15, 'potw1748a.jpeg', 4),
+(16, 'potw1749a.jpg', 2),
+(17, 'potw1750a-1.jpg', 4),
+(18, 'potw1801a.jpg', 2),
+(19, 'potw1802a.jpg', 4),
+(20, 'potw1804a.jpg', 4),
+(21, 'potw1805a.jpg', 5),
+(22, 'potw1806a.jpg', 2),
+(23, 'potw1807a.jpg', 2),
+(24, 'potw1809a.jpg', 4),
+(25, 'potw1810a.jpg', 2),
+(26, 'potw1813a.jpg', 5),
+(27, 'potw1814a.jpg', 5),
+(28, 'potw1815a.jpg', 4),
+(29, 'potw1817a.jpg', 5),
 (30, 'potw1818a.jpg', 1),
 (31, 'potw1819a.jpg', 1),
 (32, 'potw1820a.jpg', 1),
 (33, 'potw1821a.jpg', 1),
 (34, 'potw1822a.jpg', 1),
-(35, 'potw1823a.jpg', 1),
+(35, 'potw1823a.jpg', 3),
 (36, 'potw1824a.jpg', 1),
 (37, 'potw1825a.jpg', 1),
 (38, 'potw1826a.jpg', 1),
-(39, 'potw1827a.jpg', 1),
+(39, 'potw1827a.jpg', 3),
 (40, 'potw1828a.jpg', 1),
 (41, 'potw1829a.jpg', 1),
 (42, 'potw1830a.jpg', 1),
 (43, 'potw1831a.jpg', 1),
 (44, 'potw1832a.jpg', 1),
-(45, 'potw1833a.jpg', 1),
+(45, 'potw1833a.jpg', 3),
 (46, 'potw1836a.jpg', 1),
-(47, 'potw1838a.jpg', 1),
+(47, 'potw1838a.jpg', 3),
 (48, 'potw1839a.jpg', 1),
 (49, 'potw1840a.jpg', 1),
 (50, 'stsci-gallery-1022a-2000x960.jpg', 1),
 (51, 'stsci-h-p1742a-m-2000x1333.png', 1),
-(52, 'stsci-h-p1821a-m-1699x2000.png', 1),
-(53, 'updater.php', 1);
+(52, 'stsci-h-p1821a-m-1699x2000.png', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `leaderboard`
+--
+
+CREATE TABLE `leaderboard` (
+  `id` int(11) NOT NULL,
+  `name` tinytext NOT NULL,
+  `score` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `leaderboard`
+--
+
+INSERT INTO `leaderboard` (`id`, `name`, `score`) VALUES
+(22, 'Gnuma', 4),
+(23, 'AtLeastWeTried', 1),
+(24, 'ILoveNasa', 9),
+(25, 'findOut', 3),
+(26, 'Damm', 0),
+(27, 'Damm2', 1);
 
 -- --------------------------------------------------------
 
@@ -120,15 +161,11 @@ CREATE TABLE `tags` (
 --
 
 INSERT INTO `tags` (`tag_id`, `name`) VALUES
-(1, 'human\r\n'),
+(1, 'eternity'),
 (2, 'galaxy'),
 (3, 'star'),
 (4, 'infinity'),
-(5, 'time'),
-(6, 'galaxy'),
-(7, 'star'),
-(8, 'infinity'),
-(9, 'time');
+(5, 'time');
 
 --
 -- Indexes for dumped tables
@@ -149,6 +186,12 @@ ALTER TABLE `images`
   ADD KEY `tag` (`tag`);
 
 --
+-- Indexes for table `leaderboard`
+--
+ALTER TABLE `leaderboard`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tags`
 --
 ALTER TABLE `tags`
@@ -162,19 +205,25 @@ ALTER TABLE `tags`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
-  MODIFY `img_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `img_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+
+--
+-- AUTO_INCREMENT for table `leaderboard`
+--
+ALTER TABLE `leaderboard`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `tags`
 --
 ALTER TABLE `tags`
-  MODIFY `tag_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `tag_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
