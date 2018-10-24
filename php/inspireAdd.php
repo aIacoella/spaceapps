@@ -20,7 +20,7 @@
         </div>
     </div>
     <div>
-        <form class="add-input-block" action="./add.php" method="post">
+        <form class="add-input-block" action="add.php" method="post">
             <img class="addImg" src=<?php 
             if(!isset($_GET['name'])) echo "errore";
             else echo "'../img/" . $_GET['name'] . "'";

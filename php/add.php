@@ -22,7 +22,7 @@
         if(!$conn->query($query)){
             echo $conn->error;
         }
-        sleep(3000);
+        sleep(3);
         header('Location:../index.php');
         die();
     }

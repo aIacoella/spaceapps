@@ -13,8 +13,8 @@
 
     if(!isset($_GET['tag'])){
         echo "<span style =\"display:block;\">Something went wrong with the request!</span>
-            <span>You'll be redirected to the homepage.</span>";
-        header('Location:../index.php');
+            <span>You'll be redirected to the homepage.</span>
+            <script>window.location.replace(\"../index.php\");</script>";
         die();
     }else{
         /* Select all images which have the chosen tag */
