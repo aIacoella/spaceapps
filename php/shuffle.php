@@ -102,11 +102,9 @@
         $i = 1;
         while(($read = fgets($session_file, 4096)) !== false ){
             $read = substr($read, 0, strlen($read)-1);
-            $read = "'".$read."'";
+            $images_a = "'".$read."'";
             if($i != 1)
                 $images_a = $read.",";
-            echo $read;
-            die();
             $i++;
         }
         return $images_a;
