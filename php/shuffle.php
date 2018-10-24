@@ -52,7 +52,7 @@
             echo "Internal error";
             die();
         }
-        if(fwrite($fd, $image."\n") == 0){
+        if(fwrite($fd, $image."\n") === FALSE){
             echo "Internal error";
             $conn->close();
             fclose($fd);
@@ -61,16 +61,16 @@
         rewind($fd);
         $query = "SELECT comment_id, images.path, content FROM comments INNER JOIN images ON img_id = img WHERE images.path NOT IN (".get_images($fd).") ORDER BY rand() limit 1";
         if(!($r = $conn->query($query))){
-            //echo $conn->error.$query;
-            echo get_images($fd);
+            echo $conn->error.$query."\n";
+            echo $query;
             fclose($fd);
             $conn->close();
             die();
         }
         $reply = array();
         $row = $r->fetch_array(MYSQLI_ASSOC);
-        setcookie('game_image', $row['images.path'], 0, '/');
-        $reply[0] = $row['images.path'];
+        setcookie('game_image', $row['path'], 0, '/');
+        $reply[0] = $row['path'];
         $reply[1] = $row['content'];
         $r->close();
         $query = "SELECT content FROM comments WHERE comment_id !=". $row['comment_id']." ORDER BY rand() limit 3";
@@ -102,9 +102,9 @@
         $i = 1;
         while(($read = fgets($session_file, 4096)) !== false ){
             $read = substr($read, 0, strlen($read)-1);
-            $images_a = "'".$read."'";
+            $images_a .= "'".$read."'";
             if($i != 1)
-                $images_a = $read.",";
+                $images_a = ",".$read;
             $i++;
         }
         return $images_a;
