@@ -8,7 +8,7 @@
             
                 tag: tag chosen by the user.
     */
-    $reply = new stdClass();
+    $reply = array();
     include_once "db_connection.php";
 
     if(!isset($_GET['tag'])){
@@ -34,7 +34,7 @@
             $i = 0;
             while(($row = $r->fetch_array(MYSQLI_ASSOC))){
                 /* Encoding return values in JSON */
-                $reply->{"img".$i}=$row['path'];
+                $reply[$i]=$row['path'];
                $i++;
             }
         $r->close();

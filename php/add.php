@@ -11,9 +11,6 @@
     if(!isset($_POST['name']) || !isset($_POST['content'])){
         echo "<span style = \"display:block;\">Something went wrong with the request!</span>
                 <span>You'll be redirected to the homepage</span>";
-        sleep(3000);
-        header('Location:../index.php');
-        die();
     }else{
         include_once "db_connection.php";
         /*

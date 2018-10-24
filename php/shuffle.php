@@ -9,7 +9,6 @@
         $query = "SELECT comment_id, images.path, content FROM comments INNER JOIN images ON img_id = img ORDER BY rand() limit 1";
         if(!($r=$conn->query($query))){
             echo $conn->close();
-            $r->close();
             $conn->close();
             die();
         }
@@ -24,15 +23,14 @@
         }
         $row = $r->fetch_array(MYSQLI_ASSOC);
         setcookie('game_session', $session, 0, '/');
-        setcookie('game_image', $row['images.path']);
+        setcookie('game_image', $row['path']);
         $reply = array();
-        $reply[0] = $row['images.path'];
+        $reply[0] = $row['path'];
         $reply[1] = $row['content'];
         $r->close();
         $query = "SELECT content FROM comments WHERE comment_id !=". $row['comment_id']." ORDER BY rand() limit 3";
         if(!($r = $conn->query($query))){
             echo $conn->error;
-            $r->close();
             $conn->close();
             die();
         }
@@ -43,7 +41,7 @@
         }
         $r->close();
         $conn->close();
-        fclose($session);
+        fclose($fd);
         echo json_encode($reply);
         die();
     }else if(isset($_COOKIE['game_image']) && isset($_COOKIE['game_session'])){
@@ -54,16 +52,17 @@
             echo "Internal error";
             die();
         }
-        if(fwrite($fd, $image.'\n') == 0){
+        if(fwrite($fd, $image."\n") == 0){
             echo "Internal error";
             $conn->close();
             fclose($fd);
             die();
         }
+        rewind($fd);
         $query = "SELECT comment_id, images.path, content FROM comments INNER JOIN images ON img_id = img WHERE images.path NOT IN (".get_images($fd).") ORDER BY rand() limit 1";
         if(!($r = $conn->query($query))){
-            echo $conn->error;
-            $r->close();
+            //echo $conn->error.$query;
+            echo get_images($fd);
             fclose($fd);
             $conn->close();
             die();
@@ -99,9 +98,17 @@
         if($session_file == NULL)
             return false;
         $images_a = "";
-        while(fgets($session_file, 4096, $read) != ){
-            $images_a = join(',', $read);
+        $read;
+        $i = 1;
+        while(($read = fgets($session_file, 4096)) !== false ){
+            $read = substr($read, 0, strlen($read)-1);
+            $read = "'".$read."'";
+            if($i != 1)
+                $images_a = $read.",";
+            echo $read;
+            die();
+            $i++;
         }
-        return $image_a;
+        return $images_a;
     }
 ?>
