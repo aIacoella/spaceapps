@@ -1,70 +1,85 @@
-body{
-    background-color: #DDDDDD;
-    color: #111111;
-}
-
-.header{
-    padding: 10px 0 10px 40px;
+html {
+    height: 100%;
+  }
+  
+  body {
+    background: radial-gradient(
+        rgba(0, 150, 234, 0.28) 0%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      #0e0b16;
+    color: #e7dfdd;
+  }
+  
+  .header {
     z-index: 1;
-    background-color: #001f3f;
+    padding: 0 10px;
+    background-color: #0e0b16;
+    border-bottom: solid 3px #e7dfdd;
+    height: 50px;
     font-size: 20px;
-    color: #DDDDDD;
-    width: 100%;
-}
-
-.header *{
-    display:inline;
-}
-
-.header a{
-    text-decoration:none;
-}
-
-.header .inspire{
-    margin-left : 40%;
-}
-
-.header a:not(.inspire), .header span{
-    margin-left: 50px;
-}
-
-
-.tagSelection{
+    color: #e7dfdd;
     display: block;
-    margin: 8px 16px;
-    padding: 8px 16px;
-    border: solid 3px #111111;
-}
-
-.tag-div{
+  }
+  
+  .header .logotxt {
+    margin-top: 7.5px;
+    height: 35px;
+  }
+  
+  .header img {
+    height: 30px;
+    margin-top: 10px;
+  }
+  
+  .right-nav {
+    float: right;
+    text-align: right;
+    line-height: 50px;
+    vertical-align: middle;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0.2em;
+  }
+  
+  .right-nav a {
+    color: #0096ea;
+  }
+  
+  .tagSelection {
+    padding: 16px 0px;
+    text-align: center;
+  }
+  
+  .tag {
     display: inline;
-}
-
-.tag{
-    display: inline;
-}
-
-.tag span{
+    margin: 0 6px;
+  }
+  
+  .tag span {
+    font-size: 16px;
     transition: 0.2s;
-    background-color: #AAAAAA;
-}
-
-.tag span:hover{
+    padding: 8px 16px;
+    background-color: #0096ea;
+  }
+  
+  .tag span:hover {
     cursor: pointer;
-    background-color: #FF4136;
+    background-color: #0e0b16;
     opacity: 0.8;
-}
+  }
 
 .imgDiv{
-    margin: 10px;
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 8px 16px;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
 .hubble-img{
-    margin: 4px;
-    padding: 2px;
-    border: solid 2px #001f3f;
-    width: 80px;
-    height: 80px;
+    margin: 6px;
     opacity: 0.7;
     transition: 0.2s;
 }
@@ -133,38 +148,25 @@ body{
     margin: 0 10px;
 }
 
-.inputAdd{
-    grid-column: 2;
-    grid-row: 1;
-    margin: auto;
-}
-
 .textArea{
     display: block;
-    width: 600px;
-    height: 100px;
-    margin: 12px auto;
+    padding: 12px;
+    margin: auto;
+    resize: none;
 }
 
 .submit{
     margin: auto;
     display: block;
-}
 
-.add-input-block{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
+    padding: 4px 12px;
 }
 
 .addImg{
     width: 400px;
     height: 400px;
     margin: 12px auto;
-
-    object-fit: cover;
-    grid-column: 1;
-    grid-row: 1;
+    display: block;
 }
 
 .wellPlayed{

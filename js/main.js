@@ -16,7 +16,7 @@ function changeHoverState(i){
 
 function loadImages(tag){
       $.get( "../php/img_select.php",{ tag: tag } ,function( data ) {
-        const imgs = JSON.parse(data).img;
+        const imgs = JSON.parse(data);
         clearImages();
         let imgDiv = document.getElementsByClassName("imgDiv")[0];
         for(let i=0; i<imgs.length; i++){

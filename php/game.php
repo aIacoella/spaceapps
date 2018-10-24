@@ -12,7 +12,13 @@
 </head>
 <body>
 <div class="header">
-        <h1>Bridge</h1>
+        <a href="../index.php"><img src="../graphics/bridge.svg" alt="logobridge"></a>
+        <img class="logotxt" src="../graphics/bridgeHD.svg" alt="logotxt">
+        <div class="right-nav">
+        <a href="./inspire.php">inspire</a>
+        or
+        <a href="./game.php">be inspired</a>
+        </div>
     </div>
     <div class="current-score-div">
         <div id="current-score">

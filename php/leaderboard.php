@@ -9,14 +9,43 @@
 </head>
 <body>
 <div class="header">
-    <h1>Bridge</h1>
-</div>
+        <a href="../index.php"><img src="../graphics/bridge.svg" alt="logobridge"></a>
+        <img class="logotxt" src="../graphics/bridgeHD.svg" alt="logotxt">
+        <div class="right-nav">
+        <a href="./inspire.php">inspire</a>
+        or
+        <a href="./game.php">be inspired</a>
+        </div>
+    </div>
 <?php
+    /*
+        The first time this file is going to be required it'll show a sign up form.
+        When the user submit the form the leaderbord will be showed up.
+
+        Parameters:
+
+            At first:
+
+                POST:
+
+                    score: the score obtained by the user.
+
+            Later:
+
+                    name: name the user has chose.
+    */
     if(!isset($_POST['score'])){
-        /* Invalid request */
+        echo "<span style = \"display:block;\">Something went wrong with the request!</span>
+        <span>You'll be redirected to the homepage</span>";
+        sleep(3000);
+        header('Location:../index.php');
     }else{
         include_once "db_connection.php";
         if(isset($_POST['name'])){
+            $session = $_COOKIE['game_session'];
+            setcookie('game_session', "", 0, '/');
+            setcookie('game_image', "", 0, '/');
+            unlink($session);
             $name = $conn->real_escape_string($_POST['name']);
             $score = $conn->real_escape_string($_POST['score']);
            $query = "INSERT INTO leaderboard (name, score) VALUES ('$name', $score)"; 
@@ -41,6 +70,7 @@
                 }
            }
         }else{
+        /* If there's no name a form is printed */
         $score = $conn->real_escape_string($_POST['score']);
         echo "<form method = \"post\" action = \"".basename(__FILE__)."\">
                 <h2 class='wellPlayed'>Well Played!</h2>

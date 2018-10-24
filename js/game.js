@@ -8,11 +8,12 @@ window.onload=function (){
 
 function updateGame(){
   score++;
-  document.getElementById("current-score").innerText = score;
-  $.get( "../php/shuffle.php",{ img: img }, function( data ) {
-    console.log(data);
+  $.get( "../php/shuffle.php", function( data ) {
     data = JSON.parse(data);
-    console.log(data[0]);
+    if(data[0] === undefined){
+      console.log(data);
+      return;
+    }
     document.getElementById("mainImg").src = "../img/"+data[0];
     document.getElementById("mainImg").style.margin = "auto";
     img = data[0];

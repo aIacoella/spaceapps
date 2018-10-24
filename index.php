@@ -14,8 +14,8 @@
 <body>
     <div class="header-index" >
         <div style="margin: auto; width: 100%;">
-        <img src="./img/bridge.svg" alt="icon">
-        <h1 style="width:100%; text-align: center;">Bridge</h1>
+        <img src="./graphics/bridge.svg" alt="icon">
+        <img style="display:block; margin:auto;" src="./graphics/bridgeHD.svg" alt="icon">
         </div>
     </div>
     <div class="selectionWrapper">

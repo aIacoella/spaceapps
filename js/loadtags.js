@@ -8,9 +8,7 @@ window.onload = function () {
             let tagSelection = document.getElementById("tagSelection");
             let tags = response.tag;
             for(let i = 0; i<tags.length; i++){
-                let tagDiv = document.createElement("div");
-                tagDiv.className = "tag-div";
-                let tag = document.createElement("h4");
+                let tag = document.createElement("div");
                 tag.className = "tag";
                 let span = document.createElement("span");
                 span.className = "badge badge-secondary";
@@ -22,9 +20,8 @@ window.onload = function () {
                 span.appendChild(document.createTextNode(tags[i]));
 
                 tag.appendChild(span);
-                tagDiv.appendChild(tag);
 
-                tagSelection.appendChild(tagDiv);
+                tagSelection.appendChild(tag);
             }
         }
     });
