@@ -200,3 +200,11 @@ body {
   background-color: #0096ea;
   color: white;
 }
+
+.help {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  margin: 24px 0;
+}

@@ -21,6 +21,9 @@
         </div>
     </div>
     <div>
+
+ 
+
         <form class="add-input-block" action="add.php" method="post">
             <img id="mainImg" class="main-img" src=<?php 
             if(!isset($_GET['name'])) echo "errore";
@@ -30,12 +33,17 @@
             if(!isset($_GET['name'])) echo "errore";
             else echo $_GET['name'];
             ?>>
+
+   <h2 class="help">Express your feeling by writing a piece of poetry or a quote to inspire people</h2>
+
             <div class="inputAdd">
                 <textarea class="textArea" name="content" id="txtArea" rows="6" cols="70"></textarea>
                 <input class="submit" type="submit" value="Inspire">
             </div>
         </form>
     </div>
+
+
 
     <script src="../js/addAnimation.js"></script>
 

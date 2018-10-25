@@ -27,6 +27,9 @@
         </div>
     </div>
         <img class="main-img" id="mainImg" src="" alt="img">
+
+        
+   <h2 class="help">Choose the text that refers to the image showed</h2>
     <form id="gameForm" method="post" action= "leaderboard.php">
     <div class="answers-div">
         <div class="answer-block" onClick="answer(1)">
